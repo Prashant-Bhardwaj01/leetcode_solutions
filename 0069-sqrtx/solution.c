@@ -1,3 +1,3 @@
-int mySqrt(signed int x) {
-   return sqrt(x);
+int mySqrt(unsigned int x)  {
+    return sqrt(x);
 }
