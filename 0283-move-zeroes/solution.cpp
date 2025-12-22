@@ -1,15 +1,12 @@
 class Solution {
 public:
-    void moveZeroes(vector<int>& arr) {
-        int n = arr.size();
-        int counter = 0;
+    void moveZeroes(vector<int>& nums) {
+        int n = nums.size();
+        int c = 0;
         for(int i=0;i<n;i++){
-            if(arr[i]!=0){
-                arr[counter++] = arr[i];
-            }
+            if(nums[i]!=0) nums[c++] = nums[i];
         }
-        while(counter<n){
-            arr[counter++] = 0;
-        }
+        while(c<n)nums[c++] = 0;
+        
     }
 };
