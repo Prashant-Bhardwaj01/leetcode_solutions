@@ -10,20 +10,16 @@
  */
 class Solution {
 public:
-    int sizeOfLL(ListNode* head){
-        int s = 0;
+    ListNode* middleNode(ListNode* head) {
+        int size = 1;
         ListNode* helper = head;
-        while(helper){
-            s++;
+        while(helper->next){
+            size++;
             helper = helper->next;
         }
-        return s;
-    }
-    ListNode* middleNode(ListNode* head) {
-        int n = sizeOfLL(head);
-        int mid = n/2 + 1;
-        for(int i =1;i<mid;i++) head = head->next;
+        size=(size/2)+1;
+        for(int i=1;i<size;i++)
+        head = head->next;
         return head;
-        
     }
 };
