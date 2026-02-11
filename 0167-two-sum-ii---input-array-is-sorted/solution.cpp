@@ -1,14 +1,13 @@
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& arr, int target) {
-        int n = arr.size();
-        int l =0 ;
-        int h = n-1;
-        while(l<h){
-            int sum = arr[l] + arr[h];
-            if(sum == target) return {l+1,h+1};
-            if(sum > target) h--;
-            else l++;
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        int l = 0;
+        int r = numbers.size()-1;
+        while(l<r){
+            int sum = numbers[l]+numbers[r];
+            if(sum == target) return {l+1,r+1};
+            else if(sum < target) l++;
+            else r--;
         }
         return {-1,-1};
     }
